@@ -15,3 +15,6 @@ Fall 2018
 * Completed code for linked lists for strings
 * Edited lib/Makefile so it builds the class
 * Tested and debugged code
+
+09/10/18
+* [![Build Status](https://travis-ci.com/agcarte4/ece309-fall18-agcarte4.svg?token=6WZyCdq5HiG8Xn3n9eTA&branch=master)](https://travis-ci.com/agcarte4/ece309-fall18-agcarte4)
