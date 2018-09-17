@@ -42,3 +42,26 @@ class StringArray{
         void print(int n ){ printf("%s\n",string[n]);}
         
 };
+
+
+/*
+
+int main()
+{
+    StringArray newArray(1);
+    newArray.push_back("books");
+    newArray.push_back("paper");
+    newArray.push_back("pens");
+    newArray.push_back("pencil");
+    newArray.push_back("eraser");
+    newArray.push_back("notebook");
+    for(int i = 0; i<6; i++)
+        newArray.print(i);
+    printf("\n%s",newArray.get(0));
+    printf("\n%d\n\n",newArray.length());
+    printf("\n%s\n\n",newArray.remove_front());
+    for(int i = 0; i<5; i++)
+        newArray.print(i);
+    printf("\n%s",newArray.get(0));
+    return 0;
+}*/
