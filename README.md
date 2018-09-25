@@ -18,3 +18,10 @@ Fall 2018
 
 09/10/18
 * [![Build Status](https://travis-ci.com/agcarte4/ece309-fall18-agcarte4.svg?token=6WZyCdq5HiG8Xn3n9eTA&branch=master)](https://travis-ci.com/agcarte4/ece309-fall18-agcarte4)
+
+
+09/24/18
+* Added header file for polymorphic lists
+* Added source file for function definitions needed for polymorphic lists
+* Added a test file to test polymorphic lists code
+* Wrote a MAKEFILE for polymorphic lists
