@@ -24,4 +24,4 @@ Fall 2018
 * Added header file for polymorphic lists
 * Added source file for function definitions needed for polymorphic lists
 * Added a test file to test polymorphic lists code
-* Wrote a MAKEFILE for polymorphic lists
+* Updated MAKEFILE for polymorphic lists
