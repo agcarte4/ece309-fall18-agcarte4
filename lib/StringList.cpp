@@ -29,8 +29,8 @@ class List {
 private:
     ListNode *head;
     ListNode *tail;
-    int numItem = 0;
 public:
+    int numItem = 0;
     List() {head = NULL; tail = NULL;}
     void push_back(Item a) {
         ListNode *node = new ListNode(a);
@@ -52,7 +52,6 @@ public:
         else {
             if (n <= numItem && n > 0) {
                 ListNode * tmp = head;
-                ListNode * tmp1;
                 int i = 0;
                 for(; i<n-1;i++)
                     tmp = tmp->getNext();
