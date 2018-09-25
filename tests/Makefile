@@ -1,6 +1,6 @@
 
 # list the name of each file (without the .cpp file at the end)
-EXE = PList
+EXE = example, StringList, StringArray, PList
 
 all: $(EXE)
 
