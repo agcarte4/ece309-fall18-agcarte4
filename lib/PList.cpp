@@ -14,7 +14,7 @@ void PList::ListNode::setNext(ListNode *n){ next = n; }
 
 Item* PList::ListNode::getItem(){ return item; }
 
-PList::reverse_iterator::reverse_iterator(ListNode *n = NULL) { node = n;}
+//PList::reverse_iterator::reverse_iterator(ListNode *n = NULL) { node = n;}
 
 void PList::reverse_iterator::decrement() {
                     /*next = last->next;
