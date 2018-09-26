@@ -30,8 +30,8 @@ private:
     ListNode *head;
     ListNode *tail;
 public:
-    int numItem = 0;
-    List() {head = NULL; tail = NULL;}
+    int numItem;
+    List() {head = NULL; tail = NULL; numItem = 0;}
     void push_back(Item a) {
         ListNode *node = new ListNode(a);
         if (head==NULL){
