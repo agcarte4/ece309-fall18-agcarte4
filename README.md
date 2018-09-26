@@ -18,6 +18,7 @@ Fall 2018
 
 09/10/18
 * [![Build Status](https://travis-ci.com/agcarte4/ece309-fall18-agcarte4.svg?token=6WZyCdq5HiG8Xn3n9eTA&branch=master)](https://travis-ci.com/agcarte4/ece309-fall18-agcarte4)
+* FAILING
 
 
 09/24/18
@@ -25,3 +26,7 @@ Fall 2018
 * Added source file for function definitions needed for polymorphic lists
 * Added a test file to test polymorphic lists code
 * Updated MAKEFILE for polymorphic lists
+
+09/26/2018
+* Fixed various errors and MAKEFILE
+* [![Build Status](https://travis-ci.com/agcarte4/ece309-fall18-agcarte4.svg?token=6WZyCdq5HiG8Xn3n9eTA&branch=master)](https://travis-ci.com/agcarte4/ece309-fall18-agcarte4)
