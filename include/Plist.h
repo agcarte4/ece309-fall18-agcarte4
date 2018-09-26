@@ -70,7 +70,7 @@ class PList {
             ListNode *last;
             
         public:
-            reverse_iterator(ListNode *n = NULL);// { node = n;}
+            reverse_iterator(ListNode *n = NULL) { node = n;}
             void decrement();/* {
                     next = last->next;
                     last->next = node;
