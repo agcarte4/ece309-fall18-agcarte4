@@ -43,10 +43,7 @@ Item* item3 = new DoubleItem(1.05);
         copy = it.getItem();
         printf("Next thing in list is: ");
         copy->print();
-        it.increment();
-        copy = it.getItem();
-        printf("Next thing in list is: ");
-        copy->print();
+
 
 
 
