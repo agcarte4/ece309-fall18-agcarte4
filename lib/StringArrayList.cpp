@@ -1,11 +1,12 @@
 #include <iostream>
+#include <stdio.h>
 #include <string.h>
 
 class StringArray{
     private:
         char** string;
-        int numStrings = 0;
-        int size = 0;
+        int numStrings;
+        int size;
     public:
         StringArray() {numStrings = 0; size = 0;}
         StringArray(int n) { string = new char*[n];numStrings = 0; size = n;}
