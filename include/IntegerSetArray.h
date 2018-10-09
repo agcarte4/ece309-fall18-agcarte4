@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 class IntegerSet {
 protected:
     int size;
@@ -78,3 +80,4 @@ void IntegerSetArray::remove(int x){
     a.insert(9);
     printf("%d\n", a.search(9));
 }
+*/
