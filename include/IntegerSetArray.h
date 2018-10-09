@@ -27,7 +27,8 @@ bool IntegerSetArray::insert(int x){
     //printf("Inserting, %d\n",x);
     if (IntArray == NULL){
         IntArray = new int[size];
-        IntArray[size] = { -1 };
+        for(int i = 0; i < size; i++)
+            IntArray[i] = -1;
         IntArray[0] = x;
         counter = 1;
         return 1;
