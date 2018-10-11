@@ -34,3 +34,9 @@ Fall 2018
 10/09/2018
 * Added IntegerSetArray.h 
 * Added IntegerSetArray_test.cpp for testing
+
+10/11/2018
+* Added IntArry.h 
+* Added IntArray_test.cpp 
+* Updated makefiles to test code
+* minor fixes throughout to get a passing build on TravisCI
