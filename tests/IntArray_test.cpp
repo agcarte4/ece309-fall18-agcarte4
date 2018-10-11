@@ -1,4 +1,4 @@
-include "IntArray.h"
+#include "IntArray.h"
 #include <stdio.h>
 #include <string.h>
 
