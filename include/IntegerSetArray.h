@@ -17,7 +17,7 @@ protected:
     int counter;
     int size;
 public:
-    IntegerSetArray(int s) : IntegerSet(size), size(s) {IntArray = NULL;}
+    IntegerSetArray(int s) : IntegerSet(size=0), size(s) {IntArray = NULL;}
     bool insert(int x);
     bool search(int x) const;
     void remove(int x);
