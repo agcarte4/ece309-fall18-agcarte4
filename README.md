@@ -40,3 +40,7 @@ Fall 2018
 * Added IntArray_test.cpp 
 * Updated makefiles to test code
 * minor fixes throughout to get a passing build on TravisCI
+
+10/17/2018
+* Added files for homework 6
+* Attempted to get passing build on Travis-CI
