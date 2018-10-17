@@ -26,12 +26,12 @@ public:
    class iterator {
     private:
         int i;
-        IntegerSetHT * owner;
+        IntegerSetHT * base;
         int * arr;
         int size;
     public:
         iterator(IntegerSetHT * owner) {
-            owner = owner; 
+            base = owner; 
             i = 0; 
             arr = owner->table; 
             size = owner->size;
