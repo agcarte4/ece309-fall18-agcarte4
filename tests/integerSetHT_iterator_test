@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include "integerSetHT_iterator.h"
+
 int main()
 {
  IntegerSetHT set;
