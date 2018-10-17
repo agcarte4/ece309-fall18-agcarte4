@@ -1,7 +1,6 @@
 
 # add files you create here
-OBJ = example.o StringList.o StringArrayList.o PList.o hw6a.o integerSetHT_iterator.o
-
+OBJ = example.o StringList.o StringArrayList.o PList.o
 all: libece309.a
 
 test: all
