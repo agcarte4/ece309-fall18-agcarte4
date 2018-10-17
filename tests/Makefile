@@ -10,7 +10,7 @@ clean:
 	rm -f $(EXE) *~ logfile.txt $(ECE)
 
 %: %.cpp
-	$(CXX) -o $@ $< -Wall -Werror -I ../include -L ../lib -lece309 -std=c++11
+	$(CXX) -o $@ $< -Wall -Werror -std=c++11 -I ../include -L ../lib -lece309
 
 %-run:
 	@./$*
