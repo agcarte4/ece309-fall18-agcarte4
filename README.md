@@ -44,3 +44,7 @@ Fall 2018
 10/17/2018
 * Added files for homework 6
 * Attempted to get passing build on Travis-CI
+
+11/21/2018
+* Added IntInf source and test for homework 10
+* Updated makefiles 
