@@ -1,6 +1,9 @@
 //PList.h
 #include <stdio.h>
 // Hold a string, integer, or a double depending on the type created.
+
+namespace ece309 {
+
 class Item {
 public:
     virtual void print(){ printf("Item\n"); }
@@ -103,3 +106,5 @@ class PList {
         void removeAfter(iterator it); // pseudocode in zyBook 2.4
         void insertAfter(iterator it, Item item);
 };
+    
+}
