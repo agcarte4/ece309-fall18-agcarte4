@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+namespace ece309 {
+
 class StringArray{
     private:
         char** string;
@@ -66,3 +68,4 @@ int main()
     printf("\n%s",newArray.get(0));
     return 0;
 }*/
+}
