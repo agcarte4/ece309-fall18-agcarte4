@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+namespace ece309 {
+
 class IntArray {
     private:
         int length;
@@ -133,6 +135,8 @@ class IntArray {
             return sum / length;
         }
 };
+
+}
 /*int main(){
     IntArray a("ABCD");
     IntArray b(5,0);
