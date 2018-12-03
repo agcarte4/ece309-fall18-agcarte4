@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-namespace ece309{
+namespace ece309 {
 
 class IntInf {
 public:                 //public for convenience
@@ -52,11 +52,19 @@ public:
         return;
     }
 
+    IntInf thisResult(){
+        IntInf result;
+        result.empty = this->empty;
+        result.pos_inf = this->pos_inf;
+        result.neg_inf = this->neg_inf;
+        result.num = this->num;
+        return result;
+    }
     
     IntInf operator=(const IntInf &rhs){    //sets lhs inf to the value of rhs
         this->clear();
         if(rhs.empty == true)
-            return this;
+            return thisResult();
         else if(rhs.pos_inf == true)
             this->pos_inf = true;
         else if (rhs.neg_inf == true)
@@ -64,20 +72,20 @@ public:
         else
             this->num = rhs.num;
         this->empty = false;        
-        return this;
+        return thisResult();
     }
 
     IntInf operator=(const int &rhs){       //sets lhs inf to an int value
         this->clear();
         this->num = rhs;  
         this->empty = false;      
-        return this;
+        return thisResult();
     }
 
     IntInf operator+(const IntInf &rhs){    //pos_inf + neg_inf is always pos_inf and vice-versa
         IntInf result;
         if(this->pos_inf)                   //if lhs is pos_inf, then result is pos_inf
-            return this;
+            return thisResult();
         else if(this->neg_inf){             //if lhs is neg_inf, then result is neg_inf
             result.neg_inf = true;
             result.empty = false;
@@ -104,15 +112,16 @@ public:
                 result.num = (this->num + rhs.num);
                 return result;
             }
-        }                   
+        }
+        return result;                   
     }
 
     IntInf operator-(const IntInf &rhs){    //pos_inf - neg_inf is always pos_inf and vice versa
         IntInf result;
         if(this->pos_inf)                   //if lhs is pos_inf, then result is pos_inf
-            return this;
+            return thisResult();
         else if(this->neg_inf)              //if lhs is neg_inf, then result is neg_inf
-            return this;
+            return thisResult();
         else if(rhs.pos_inf){               //lhs is either an int or empty          
             result.empty = false;           //thus, if rhs is pos_inf, then result is neg_inf
             result.neg_inf = true;
@@ -143,7 +152,8 @@ public:
                 result.num = (this->num - rhs.num);
                 return result;
             }
-        }                   
+        }
+        return result;                   
     }
 
     IntInf operator*(const IntInf &rhs){
@@ -155,7 +165,7 @@ public:
         }
         else if(this->pos_inf){              
             if(!(rhs.neg_inf))          //rhs is not neg_inf then result is pos_inf
-                return this;            //return this as it is pos_inf
+                return thisResult();            //return this as it is pos_inf
             else
                 return rhs;             //else return rhs as its neg_inf   
         }
@@ -166,7 +176,7 @@ public:
                 return result;
             }
             else
-                return this;            //else, the result is always neg_inf
+                return thisResult();            //else, the result is always neg_inf
         }
         else if(this->empty)
             return rhs;                 //if lhs is empty, the result is always rhs
@@ -184,6 +194,7 @@ public:
                 return result;
             }
         }
+        return result;
     }
 
     IntInf operator/(const IntInf &rhs){
@@ -194,7 +205,7 @@ public:
         }
         else if(this->pos_inf){              
             if(!(rhs.neg_inf))          //rhs is not neg_inf then result is pos_inf
-                return this;            //return this as it is pos_inf
+                return thisResult();            //return this as it is pos_inf
             else
                 return rhs;             //else return rhs as its neg_inf   
         }
@@ -205,10 +216,10 @@ public:
                 return result;
             }
             else 
-                return this;            //else, always negative
+                return thisResult();            //else, always negative
         }
         else if (this->empty)           //empty always results in empty unless rhs = 0  
-            return this;
+            return thisResult();
         else{                           //else lhs is an int
             if(rhs.pos_inf || rhs.neg_inf){ //if rhs is +/- inf, then result is 0
                 result.empty = false;
@@ -216,13 +227,14 @@ public:
                 return result;
             }
             else if (rhs.empty)         //division by nothing is lhs
-                return this;    
+                return thisResult();    
             else{                       //else, lhs and rhs are non-zero ints
                 result.empty = false;
                 result.num = this->num / rhs.num;
                 return result;
             }
         }
+        return result;
     }
 
     bool operator==(const IntInf &rhs){
@@ -250,6 +262,7 @@ public:
             else 
                 return false;
         }
+        return false;
     }
 
     bool operator>(const IntInf &rhs){
@@ -273,6 +286,7 @@ public:
             else                        //else, both are ints
                 return ((this->num) > (rhs.num));
         }
+        return false;
     }
 
     bool operator<(const IntInf &rhs){
@@ -295,8 +309,8 @@ public:
                 return false;
             else                        //else, both are ints, so compare
                 return ((this->num) < (rhs.num));
-        }        
+        }           
+    return false;
     }
 };
-    
 }
