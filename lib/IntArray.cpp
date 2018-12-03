@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+namespace ece309 {
+
 class IntArray {
     private:
         int length;
@@ -133,7 +135,7 @@ class IntArray {
             return sum / length;
         }
 };
-int main(){/*
+/*int main(){
     IntArray a("ABCD");
     IntArray b(5,0);
     IntArray c("zzzDEAS");
@@ -142,6 +144,9 @@ int main(){/*
     char * s = (char*) c;
     printf("\n%s\n",s);
     a = a << 2;
-    */
+ 
     return 0;
-};
+    
+};*/
+
+}
