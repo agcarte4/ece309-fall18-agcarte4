@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+namespace ece309 {
+
 class IntegerSet {
 protected:
     int size;
@@ -69,6 +71,8 @@ void IntegerSetArray::remove(int x){
         }
     }
 }
+
+}    
 
 /*int main(){
     int size = 3;
