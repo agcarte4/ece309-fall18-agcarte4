@@ -1,6 +1,8 @@
 #include "Plist.h"
 int main()
 {
+using namespace ece309;
+  
 PList l;
 Item* item = new IntItem(3);
 Item* item2 = new StringItem("malk");
