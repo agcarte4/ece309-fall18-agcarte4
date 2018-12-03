@@ -3,6 +3,8 @@
 
 int main()
 {
+    using namespace ece309;
+    
     int testPassCnt = 0;
     int testFailCnt = 0;
     
