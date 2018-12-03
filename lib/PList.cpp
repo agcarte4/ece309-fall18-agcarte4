@@ -3,6 +3,8 @@
 //
 #include "Plist.h"
 
+namespace ece309 {
+
 PList::ListNode::ListNode(Item *a, PList::ListNode *n = NULL ){
         item = a;
         next = n; // automatically serves as a list tail
@@ -113,4 +115,6 @@ void PList::removeAfter(PList::iterator it) // pseudocode in zyBook 2.4
         if (tail==remove) tail = tmp;      // if removing tail, update tail
             delete remove; // delete node      // delete the removed node
      }
+}
+	
 }
