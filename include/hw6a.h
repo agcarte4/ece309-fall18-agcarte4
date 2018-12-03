@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+namespace ece309 {
+
 class IntegerSet {
 protected:
    int size;
@@ -56,4 +58,6 @@ bool IntegerSetHT::insert(int data)
   // otherwise give up
    failures ++;
    return false;
+}
+   
 }
