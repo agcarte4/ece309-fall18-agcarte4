@@ -4,6 +4,7 @@
 
 int main()
 {
+using namespace ece309;
     IntegerSetHT a(1000);
     srand(time(NULL));
 
