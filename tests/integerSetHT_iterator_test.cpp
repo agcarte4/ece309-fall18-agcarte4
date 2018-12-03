@@ -3,6 +3,7 @@
 
 int main()
 {
+    using namespace ece309;
  IntegerSetHT set;
 set.insert(5);
 set.insert(99);
