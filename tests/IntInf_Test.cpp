@@ -1,5 +1,8 @@
 
 int main(){     //IntInf has 3 constructors:  IntInf produces empty IntInf object with no values
+    
+    using namespace ece309;
+    
     IntInf a;               //IntInf(bool) produces pos(true) or neg(false) infinity IntInf
         printf("a is ");    //IntInf(int) produces IntInf initialized to an int
         a.print();
