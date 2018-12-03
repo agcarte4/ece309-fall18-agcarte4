@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+namespace ece309{
 
 class IntInf {
 public:                 //public for convenience
@@ -297,3 +298,5 @@ public:
         }        
     }
 };
+    
+}
