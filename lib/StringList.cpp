@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 
+namespace ece309 {
 
 class Item {
 private:
@@ -108,3 +109,5 @@ int main()
     z.remove_front();
 
 }*/
+    
+}
