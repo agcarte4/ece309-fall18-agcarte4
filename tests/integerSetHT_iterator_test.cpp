@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "integerSetHT_iterator.h"
+#include "IntegerSetHT_iterator.h"
 
 int main()
 {
