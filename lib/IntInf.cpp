@@ -3,15 +3,13 @@
 
 namespace ece309 {
 
-class IntInf {
-public:
-    IntInf() {          //default constructor creates an empty object
+ IntInf::IntInf() {          //default constructor creates an empty object
         pos_inf = false; 
         neg_inf = false; 
         num = 0;
         empty = true;
     }
-    IntInf(bool val) {  //parameter determines if object is positive or negative infinity
+    IntInf::IntInf(bool val) {  //parameter determines if object is positive or negative infinity
         empty = false;
         if(val == true){
             pos_inf = true; 
@@ -24,19 +22,19 @@ public:
             num = 0;
         }
     }
-    IntInf(int val) {   //parameter sets the object to represent an integer
+    IntInf::IntInf(int val) {   //parameter sets the object to represent an integer
         empty = false;
         pos_inf = false; 
         neg_inf = false; 
         num = val;
     }
-    void clear(){       //used to clear an object for operations
+    void IntInf::clear(){       //used to clear an object for operations
         empty = true;
         pos_inf = false;
         neg_inf = false;
         num = 0;
     }
-    void print(){       //prints what the object represents
+    void IntInf::print(){       //prints what the object represents
         if(pos_inf == true)
             printf("positive infinity.\n");
         else if(neg_inf == true)
@@ -48,7 +46,7 @@ public:
         return;
     }
 
-    IntInf thisResult(){
+    IntInf IntInf::thisResult(){
         IntInf result;
         result.empty = this->empty;
         result.pos_inf = this->pos_inf;
@@ -57,7 +55,7 @@ public:
         return result;
     }
     
-    IntInf operator=(const IntInf &rhs){    //sets lhs inf to the value of rhs
+    IntInf IntInf::operator=(const IntInf &rhs){    //sets lhs inf to the value of rhs
         this->clear();
         if(rhs.empty == true)
             return thisResult();
@@ -71,14 +69,14 @@ public:
         return thisResult();
     }
 
-    IntInf operator=(const int &rhs){       //sets lhs inf to an int value
+    IntInf IntInf::operator=(const int &rhs){       //sets lhs inf to an int value
         this->clear();
         this->num = rhs;  
         this->empty = false;      
         return thisResult();
     }
 
-    IntInf operator+(const IntInf &rhs){    //pos_inf + neg_inf is always pos_inf and vice-versa
+    IntInf IntInf::operator+(const IntInf &rhs){    //pos_inf + neg_inf is always pos_inf and vice-versa
         IntInf result;
         if(this->pos_inf)                   //if lhs is pos_inf, then result is pos_inf
             return thisResult();
@@ -112,7 +110,7 @@ public:
         return result;                   
     }
 
-    IntInf operator-(const IntInf &rhs){    //pos_inf - neg_inf is always pos_inf and vice versa
+    IntInf IntInf::operator-(const IntInf &rhs){    //pos_inf - neg_inf is always pos_inf and vice versa
         IntInf result;
         if(this->pos_inf)                   //if lhs is pos_inf, then result is pos_inf
             return thisResult();
@@ -152,7 +150,7 @@ public:
         return result;                   
     }
 
-    IntInf operator*(const IntInf &rhs){
+    IntInf IntInf::operator*(const IntInf &rhs){
         IntInf result;                  
         if((!rhs.pos_inf) && !(rhs.neg_inf) && (rhs.num == 0)){
             result.empty = false;       //check for 0 in rhs
@@ -193,7 +191,7 @@ public:
         return result;
     }
 
-    IntInf operator/(const IntInf &rhs){
+    IntInf IntInf::operator/(const IntInf &rhs){
         IntInf result;
         if((rhs.num == 0) && !(rhs.pos_inf) && !(rhs.neg_inf)){//special case: division by 0 is impossible regardless of lhs
             result.num = 1 / (rhs.num);
@@ -233,7 +231,7 @@ public:
         return result;
     }
 
-    bool operator==(const IntInf &rhs){
+    bool IntInf::operator==(const IntInf &rhs){
         if(this->pos_inf){              //cases for when lhs is pos_inf
             if(rhs.pos_inf)             //only true if rhs is also pos_inf
                 return true;
@@ -261,7 +259,7 @@ public:
         return false;
     }
 
-    bool operator>(const IntInf &rhs){
+    bool IntInf::operator>(const IntInf &rhs){
         if(this->pos_inf){              //cases for lhs = pos_inf
             if(rhs.pos_inf)             //only false when rhs is pos_inf
                 return false;
@@ -285,7 +283,7 @@ public:
         return false;
     }
 
-    bool operator<(const IntInf &rhs){
+    bool IntInf::operator<(const IntInf &rhs){
         if(this->pos_inf)               //pos_inf is never less than anything
             return false;
         else if(this->neg_inf){         //neg_inf is less than everything except neg_inf
@@ -308,5 +306,4 @@ public:
         }           
     return false;
     }
-};
 }
