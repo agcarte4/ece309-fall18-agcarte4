@@ -1,6 +1,6 @@
 
 # list the name of each file (without the .cpp file at the end)
-EXE = IntInf_Test example PList IntegerSetArray_test IntArray_test integerSetHT_iterator_test
+EXE = IntInf_Test example PList IntegerSetArray_test IntArray_test integerSetHT_iterator_test hw6a_test
 
 all: $(EXE)
 
