@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "IntInf.h"
 
 int main(){     //IntInf has 3 constructors:  IntInf produces empty IntInf object with no values
     
