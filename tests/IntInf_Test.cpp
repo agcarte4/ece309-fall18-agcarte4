@@ -1,3 +1,5 @@
+#include <stdio.h>
+namespace 309 {
 
 int main(){     //IntInf has 3 constructors:  IntInf produces empty IntInf object with no values
     
@@ -50,3 +52,4 @@ int main(){     //IntInf has 3 constructors:  IntInf produces empty IntInf objec
         printf("d is not less than e\n");
     return 0;
 };
+}
