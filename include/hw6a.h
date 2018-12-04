@@ -39,7 +39,6 @@ IntegerSetHT::IntegerSetHT(int htsize)
 
 bool IntegerSetHT::insert(int data)
 {
-  int before = collisions;
   int index = hash(data);
   int bucketsProbed = 0;
   while( bucketsProbed++ < probeDistance )
@@ -51,7 +50,7 @@ bool IntegerSetHT::insert(int data)
      table[ index ] = data;
      return true;
    }
-   if(collisions==before)
+   if(bucketsProbed == 1)
         collisions++;
    index = (index+1) % size;
   }
